@@ -1,0 +1,31 @@
+﻿@model IndexModel
+<style type="text/css">
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+
+<div class="text-black m-4" id="teste">
+    <div class="col-md-12 text-center">
+        <div class="text-center mb-5" style="margin: auto">
+            <img src="@Model.comic.UrlImagem" class="imgBorder" />
+            <h4>@Model.comic.Titulo</h4>
+            <span style="font-size: 125%;">@Html.Raw(Model.comic.Descricao)</span>
+        </div>
+    </div>
+    <div class="text-center" style="margin-top: 5%">
+        <h1>Characaters</h1>
+    </div>
+
+    @foreach (var item in Model.personagems)
+    {<div class="row mt-5">
+            <div class="col-xl-4 text-center mb-5" style="margin: auto">
+                <img class="rounded-circle" src="@item.UrlImagem" height="200" width="200" />
+                <h2><a href="@item.UrlWiki">@item.Nome</a></h2>
+                <p>@item.Descricao</p>
+            </div>
+        </div>
+    }
+</div>
+
