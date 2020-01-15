@@ -1,4 +1,4 @@
-﻿@model IndexModel
+@model IndexModel
 <style type="text/css">
     ul {
         list-style-type: none;
@@ -22,10 +22,9 @@
     {<div class="row mt-5">
             <div class="col-xl-4 text-center mb-5" style="margin: auto">
                 <img class="rounded-circle" src="@item.UrlImagem" height="200" width="200" />
-                <h2><a href="@item.UrlWiki">@item.Nome</a></h2>
+                <h2><a target="_blank" href="@item.UrlWiki">@item.Nome</a></h2>
                 <p>@item.Descricao</p>
             </div>
         </div>
     }
 </div>
-
